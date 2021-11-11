@@ -3,13 +3,14 @@ import TodoForm from './TodoForm';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { BiCheckCircle } from 'react-icons/bi';
 
-const Todo = ({ todo, completeTodo, removeTodo }) => {
+const Todo = ({ todo, completeTodo, removeTodo, importantTodo }) => {
   return (
     <div
       className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
     >
       {todo.text}
       <div className='iconsContainer'>
+        <button onClick={() => importantTodo(todo.id)} className="important-btn">!</button>
         <RiCloseCircleLine
           onClick={() => removeTodo(todo.id)}
           className='icon'
