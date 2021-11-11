@@ -7,6 +7,7 @@ const Todo = ({ todo, completeTodo, removeTodo, importantTodo }) => {
   return (
     <div
       className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
+      style={todo.important ? { background: "orange" } : {}}
     >
       {todo.text}
       <div className='iconsContainer'>
