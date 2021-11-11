@@ -26,6 +26,17 @@ body {
   padding-bottom: 32px;
 }
 
+.important-btn {
+  margin-right: 5px;
+  width: 20px;
+  border-width: 1px;
+  border-radius: 49%;
+  padding: 1px;
+  border-color: white;
+  color: white;
+  background: transparent;
+}
+
 h1 {
   margin: 32px 0;
   font-size: 33px;
@@ -89,10 +100,6 @@ h1 {
   align-items: center;
   font-size: 24px;
   cursor: pointer;
-}
-
-.icon {
-  color: white
 }
 
 .seperator {
