@@ -29,6 +29,19 @@ function TodoList() {
     });
     setTodos(updatedTodos);
   };
+  
+  const importantTodo = (id) => {
+    let updatedTodos = todos.map((todo) => {
+      if(todo.id === id) {
+        todo.important = !todo.important
+      }
+      return todo
+    })
+
+    updatedTodos = updatedTodos.sort((a, b) => b.important - a.important)
+
+    setTodos(updatedTodos)
+  }
 
   return (
     <>
@@ -41,6 +54,7 @@ function TodoList() {
             todo={todo}
             completeTodo={completeTodo}
             removeTodo={removeTodo}
+            importantTodo={importantTodo}
           />
         );
       })}
